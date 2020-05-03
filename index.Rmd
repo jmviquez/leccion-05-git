@@ -49,7 +49,14 @@ La relación entre estas operaciones de Git, se ilustra en la figura siguiente:
 
 ![Operaciones de Git. Imagen de Steven Klavins https://medium.com/@stevenklavins94/version-control-part-4-c9387cf5b33e](img/git-push-pull.png)
 
+Otros comandos de Git que son de uso común son:
 
+* [git config](https://git-scm.com/docs/git-config) para especificar opciones globales de la sesión de Git (ej. nombre del usuario, dirección de corre electrónico).
+* [git clone](https://git-scm.com/docs/git-clone) para clonar (i.e. copiar) un repositorio remoto en la computadora local.
+* [git status](https://git-scm.com/docs/git-status) para revisar el estado de los archivos y, por ejemplo, saber cuales deben pasarse al área de espera.
+
+## Ejemplos de flujos de trabajo
+### Clonación de un repositorio remoto y _push_ de los cambios realizados localmente
 
 
 
