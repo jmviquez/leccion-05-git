@@ -29,6 +29,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * Libro sobre Git, GitHub y R: [Happy Git and GitHub for the useR](https://happygitwithr.com/).
 
+* Mejores prácticas para la escritura de mensajes en los commit: [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/).
+
 ## Características generales de Git
 [Git](https://git-scm.com/) es un sistema de [control de versiones](https://en.wikipedia.org/wiki/Version_control) diseñado para rastrear cambios en el código fuente durante el proceso de desarrollo de software. Sin embargo, puede ser utilizado para llevar el control de los cambios en cualquier conjunto de archivos (ej. [documentación](https://guides.github.com/features/wikis/), [música](https://techcrunch.com/2013/10/09/splice-music/)). Un sistema de control de versiones proporciona, entre otras ventajas:
 
@@ -53,7 +55,7 @@ La relación entre estas operaciones de Git, se ilustra en la figura 1:
 
 ![Figura 1: Operaciones de Git. Imagen de Steven Klavins (https://medium.com/@stevenklavins94/version-control-part-4-c9387cf5b33e)](img/git-push-pull.png)
 
-Otros comandos de Git que son de uso común son:
+Otros comandos de Git de uso común son:
 
 * [git config](https://git-scm.com/docs/git-config) para especificar opciones globales de la sesión de Git (ej. nombre del usuario, dirección de corre electrónico).
 * [git clone](https://git-scm.com/docs/git-clone) para clonar (i.e. copiar) un repositorio remoto en la computadora local.
