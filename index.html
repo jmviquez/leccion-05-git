@@ -1577,7 +1577,7 @@ div.tocify {
 <li><p>Tutorial sobre comandos de Git (parte 2): <a href="https://kolosek.com/git-commands-tutorial-part2/">Git Commands Tutorial - Part 2</a>.</p></li>
 <li><p>Curso sobre investigación reproducible - Git y GitHub: <a href="https://www.coursera.org/learn/reproducible-templates-analysis/lecture/Cg6k7/git-and-github-part-1">Reproducible Templates for Analysis and Dissemination - Git and Github Part 1</a>.</p></li>
 <li><p>Libro sobre Git, GitHub y R: <a href="https://happygitwithr.com/">Happy Git and GitHub for the useR</a>.</p></li>
-<li><p>Mejores prácticas para la escritura de mensajes en los commit: <a href="https://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a>.</p></li>
+<li><p>Mejores prácticas para la escritura de mensajes en los <em>commit</em>: <a href="https://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a>.</p></li>
 </ul>
 </div>
 <div id="caracteristicas-generales-de-git" class="section level2">
@@ -1596,7 +1596,7 @@ div.tocify {
 <h2>¿Cómo funciona Git?</h2>
 <p>Desde el punto de vista de un usuario de Git (ej. un programador), Git se utiliza para sincronizar la versión local de un conjunto de archivos, llamado proyecto o repositorio, con la versión que está alojada en un sistema remoto (ej. GitHub). Cada repositorio se almacena en un directorio (carpeta) del sistema operativo. Esta sincronización se realiza principalmente a través de dos operaciones:</p>
 <ul>
-<li><strong><em>push</em></strong>: para “subir” al repositorio remoto los cambios realizados en el repositorio local. Esta operación se realiza mediante el comando <a href="https://git-scm.com/docs/git-push">git push</a>. Entre los parámetros del comando, se requiere especificar el repositorio remoto (ej. <em>origin</em>) y la rama que están siendo actualizados (ej. <em>master</em>). Es probable que el sistema remoto le solicite al usuario algún tipo de autenticación (ej. mediante nombre de usuario y clave).</li>
+<li><strong><em>push</em></strong>: para “subir” al repositorio remoto los cambios realizados en el repositorio local. Esta operación se realiza mediante el comando <a href="https://git-scm.com/docs/git-push">git push</a>. Es probable que el sistema remoto le solicite al usuario algún tipo de autenticación (ej. mediante nombre de usuario y clave).</li>
 <li><strong><em>pull</em></strong>: para “bajar” al repositorio local los cambios realizados en el repositorio remoto. Esta operación se realiza mediante el comando <a href="https://git-scm.com/docs/git-pull">git pull</a>.</li>
 </ul>
 <p>Antes de un <em>push</em>, el usuario debe seleccionar los archivos que desea subir mediante el comando <a href="https://git-scm.com/docs/git-add">git add</a>, el cual pasa los archivos a un “área de espera” (<em>staging area</em>). Luego debe usarse el comando <a href="https://git-scm.com/docs/git-commit">git commit</a> para “guardar” los cambios en el área de espera.</p>
@@ -1624,8 +1624,6 @@ $ git config --global user.email &quot;usuario@correo.com&quot;
 $ git config --global user.name &quot;Mi nombre de usuario&quot;
 
 # 2. Clonación del repositorio remoto a la estación de trabajo local.
-# - La dirección del repositiorio remoto queda almacenada en una variable llamada &quot;origin&quot;.
-# - La rama principal del repositorio se denomina &quot;master&quot;.
 # Debe sustituir &quot;usuario&quot; por su nombre de usuario en GitHub.
 $ git clone https://github.com/usuario/tutorial-git-repo-ejemplo.git
 
@@ -1637,14 +1635,15 @@ $ cd tutorial-git-repo-ejemplo
 # 5. Revisión de los archivos con cambios.
 $ git status
 
-# 6. Adición de los archivos con cambios al &quot;área de espera&quot;.
+# 6. Adición de los archivos modificados al &quot;área de espera&quot;.
+# El punto (.) indica que se agregarán todos los archivos modificados.
 $ git add .
 
 # 7. Commit de los cambios
 $ git commit -m &quot;Agregar líneas&quot;.
 
 # 8. Push de los cambios.
-$ git push -u origin master</code></pre>
+$ git push</code></pre>
 <p>Si se realizan nuevos cambios, deben repetirse los pasos del 5 al 8.</p>
 </div>
 </div>

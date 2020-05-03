@@ -29,7 +29,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * Libro sobre Git, GitHub y R: [Happy Git and GitHub for the useR](https://happygitwithr.com/).
 
-* Mejores prácticas para la escritura de mensajes en los commit: [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/).
+* Mejores prácticas para la escritura de mensajes en los _commit_: [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/).
 
 ## Características generales de Git
 [Git](https://git-scm.com/) es un sistema de [control de versiones](https://en.wikipedia.org/wiki/Version_control) diseñado para rastrear cambios en el código fuente durante el proceso de desarrollo de software. Sin embargo, puede ser utilizado para llevar el control de los cambios en cualquier conjunto de archivos (ej. [documentación](https://guides.github.com/features/wikis/), [música](https://techcrunch.com/2013/10/09/splice-music/)). Un sistema de control de versiones proporciona, entre otras ventajas:
@@ -46,7 +46,7 @@ El protocolo de Git es utilizado en varios sitios que proveen servicios de aloja
 ## ¿Cómo funciona Git?
 Desde el punto de vista de un usuario de Git (ej. un programador), Git se utiliza para sincronizar la versión local de un conjunto de archivos, llamado proyecto o repositorio, con la versión que está alojada en un sistema remoto (ej. GitHub). Cada repositorio se almacena en un directorio (carpeta) del sistema operativo. Esta sincronización se realiza principalmente a través de dos operaciones:
 
-* **_push_**: para "subir" al repositorio remoto los cambios realizados en el repositorio local. Esta operación se realiza mediante el comando [git push](https://git-scm.com/docs/git-push). Entre los parámetros del comando, se requiere especificar el repositorio remoto (ej. _origin_) y la rama que están siendo actualizados (ej. _master_). Es probable que el sistema remoto le solicite al usuario algún tipo de autenticación (ej. mediante nombre de usuario y clave).
+* **_push_**: para "subir" al repositorio remoto los cambios realizados en el repositorio local. Esta operación se realiza mediante el comando [git push](https://git-scm.com/docs/git-push). Es probable que el sistema remoto le solicite al usuario algún tipo de autenticación (ej. mediante nombre de usuario y clave).
 * **_pull_**: para "bajar" al repositorio local los cambios realizados en el repositorio remoto. Esta operación se realiza mediante el comando [git pull](https://git-scm.com/docs/git-pull).
 
 Antes de un _push_, el usuario debe seleccionar los archivos que desea subir mediante el comando [git add](https://git-scm.com/docs/git-add), el cual pasa los archivos a un "área de espera" (_staging area_). Luego debe usarse el comando [git commit](https://git-scm.com/docs/git-commit) para "guardar" los cambios en el área de espera.
@@ -74,8 +74,6 @@ $ git config --global user.email "usuario@correo.com"
 $ git config --global user.name "Mi nombre de usuario"
 
 # 2. Clonación del repositorio remoto a la estación de trabajo local.
-# - La dirección del repositiorio remoto queda almacenada en una variable llamada "origin".
-# - La rama principal del repositorio se denomina "master".
 # Debe sustituir "usuario" por su nombre de usuario en GitHub.
 $ git clone https://github.com/usuario/tutorial-git-repo-ejemplo.git
 
@@ -87,14 +85,15 @@ $ cd tutorial-git-repo-ejemplo
 # 5. Revisión de los archivos con cambios.
 $ git status
 
-# 6. Adición de los archivos con cambios al "área de espera".
+# 6. Adición de los archivos modificados al "área de espera".
+# El punto (.) indica que se agregarán todos los archivos modificados.
 $ git add .
 
 # 7. Commit de los cambios
 $ git commit -m "Agregar líneas".
 
 # 8. Push de los cambios.
-$ git push -u origin master
+$ git push
 ```
 
 Si se realizan nuevos cambios, deben repetirse los pasos del 5 al 8.
