@@ -73,7 +73,7 @@ Otros comandos de Git de uso frecuente son:
 * [git clone](https://git-scm.com/docs/git-clone): para clonar (i.e. copiar) un repositorio remoto en la computadora local.
 * [git status](https://git-scm.com/docs/git-status): para revisar el estado de los archivos y, por ejemplo, saber cuales deben pasarse al área de espera.
 
-## Ejemplos de flujos de trabajo
+## Ejemplos de uso
 ### Clonación de un repositorio remoto y "push" de los cambios efectuados localmente
 En este ejemplo de flujo de trabajo, se clonará un repositorio remoto en la computadora local, se realizarán cambios en uno de sus archivos y se "subirán" de vuelta al repositorio remoto mediante la operación _push_ de Git.
 
