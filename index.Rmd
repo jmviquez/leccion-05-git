@@ -84,6 +84,8 @@ $ cd
 # Debe modificar la dirección de correo y el nombre del usuario con sus propios datos.
 $ git config --global user.email "usuario@correo.com"
 $ git config --global user.name "Nombre de usuario"
+# Para revisar:
+$ git config --global --list
 
 # 2. Clonación del repositorio remoto a la estación de trabajo local.
 # Debe sustituir "usuario" por su nombre de usuario en GitHub.
