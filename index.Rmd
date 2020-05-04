@@ -26,7 +26,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * Curso sobre investigación reproducible - Git y GitHub: [Reproducible Templates for Analysis and Dissemination - Git and Github Part 1](https://www.coursera.org/learn/reproducible-templates-analysis/lecture/Cg6k7/git-and-github-part-1).
 
-* Ayuda para el uso de la línea de comandos en sistemas Unix: [Command Line Cheat Sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/).
+* Ayuda para el uso de la línea de comandos: (macOS, Linux) [Command Line Cheat Sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/), (Windows) [How to use the Windows command line (DOS)](https://www.computerhope.com/issues/chusedos.htm).
 
 ## Características generales de Git
 [Git](https://git-scm.com/) es un sistema de [control de versiones](https://en.wikipedia.org/wiki/Version_control) diseñado para rastrear cambios en el código fuente durante el proceso de desarrollo de software. Sin embargo, puede ser utilizado para llevar el control de los cambios en cualquier conjunto de archivos (ej. [documentación](https://guides.github.com/features/wikis/), [música](https://techcrunch.com/2013/10/09/splice-music/)). Un sistema de control de versiones proporciona, entre otras ventajas:
