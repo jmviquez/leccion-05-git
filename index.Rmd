@@ -36,7 +36,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * La capacidad de recuperar versiones anteriores del conjunto de archivos (ej. un _release_ anterior del software).
 * La capacidad de integrar modificaciones efectuadas por varias personas en el conjunto de archivos.
-* La capacidad de mantener varias "ramas" (_branches_) de un producto (ej. "estable", "evaluación", "inestable", como en el caso de [Debian Linux](https://www.debian.org/releases/) y de muchos otros proyectos de software libre).
+* La capacidad de mantener varias "ramas" (_branches_) de un producto (ej. "estable", "evaluación", "inestable", como en el caso de [Debian Linux](https://www.debian.org/releases/), [GRASS GIS](https://grass.osgeo.org/download/software/sources/) y muchos otros proyectos de software libre).
 * Facilidades para mantener redundancia y respaldos de los archivos (ej. [Programa de respaldos de GitHub](https://archiveprogram.github.com/)).
 
 Git fue desarrollado por [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds) en 2005 durante del desarrollo del [_kernel_ del sistema operativo Linux](https://en.wikipedia.org/wiki/Linux_kernel). Se caracteriza por ser un [sistema de control de versiones distribuido](https://en.wikipedia.org/wiki/Distributed_version_control), lo que significa que el código fuente puede estar alojado en la estación de trabajo de cualquier miembro del equipo de desarrollo (i.e. no hay un repositorio "central"). Es un proyecto de [software libre](https://en.wikipedia.org/wiki/Free_software) que se comparte mediante una licencia [GNU General Public Licence (GNU GPL)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
@@ -44,9 +44,9 @@ Git fue desarrollado por [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_To
 El protocolo de Git es utilizado en varios sitios que proveen servicios de alojamiento de software, entre los que están [SourceForge](https://sourceforge.net/), [Bitbucket](https://bitbucket.org/), [GitLab](https://about.gitlab.com/) y [GitHub](https://github.com/).
 
 ## ¿Cómo funciona Git?
-Desde el punto de vista de un usuario de Git (ej. un programador), Git se utiliza para sincronizar la versión local de un conjunto de archivos, llamado proyecto o repositorio, con la versión que está alojada en un sistema remoto (ej. GitHub). Cada repositorio se almacena en un directorio (carpeta) del sistema operativo. Esta sincronización se realiza principalmente a través de dos operaciones:
+Desde el punto de vista de un usuario de Git (ej. un programador), Git se utiliza para sincronizar la versión local de un conjunto de archivos, llamado proyecto o repositorio, con la versión que está alojada en un sistema remoto (ej. GitHub). Cada repositorio se almacena en un directorio (carpeta) del sistema operativo. La sincronización se realiza principalmente a través de dos operaciones:
 
-* **_push_**: para "subir" al repositorio remoto los cambios realizados en el repositorio local. Esta operación se realiza mediante el comando [git push](https://git-scm.com/docs/git-push). Es probable que el sistema remoto le solicite al usuario algún tipo de autenticación (ej. mediante nombre de usuario y clave).
+* **_push_**: para "subir" al repositorio remoto los cambios realizados en el repositorio local. Esta operación se realiza mediante el comando [git push](https://git-scm.com/docs/git-push). Es probable que el sistema remoto le solicite al usuario algún tipo de autenticación (ej. nombre de usuario y clave).
 * **_pull_**: para "bajar" al repositorio local los cambios realizados en el repositorio remoto. Esta operación se realiza mediante el comando [git pull](https://git-scm.com/docs/git-pull).
 
 Antes de un _push_, el usuario debe seleccionar los archivos que desea subir mediante el comando [git add](https://git-scm.com/docs/git-add), el cual pasa los archivos a un "área de espera" (_staging area_). Luego debe usarse el comando [git commit](https://git-scm.com/docs/git-commit) para "guardar" los cambios en el área de espera.
@@ -55,7 +55,11 @@ La relación entre estas operaciones de Git, se ilustra en la figura 1:
 
 ![Figura 1: Operaciones de Git. Imagen de Steven Klavins (https://medium.com/@stevenklavins94/version-control-part-4-c9387cf5b33e)](img/git-push-pull.png)
 
-Otros comandos de Git de uso común son:
+En la figura 2 se muestra la función de algunos de los comandos de Git mediante una comparación con el procesamiento de una compra en línea:
+
+![Figura 2: Operaciones de Git y compras en línea. Imagen de Melinda Higgins (https://www.coursera.org/learn/reproducible-templates-analysis/lecture/NGbQv/git-and-github-part-2)](img/git-stage-commit-push.png)
+
+Otros comandos de Git de uso frecuente son:
 
 * [git config](https://git-scm.com/docs/git-config) para especificar opciones globales de la sesión de Git (ej. nombre del usuario, dirección de corre electrónico).
 * [git clone](https://git-scm.com/docs/git-clone) para clonar (i.e. copiar) un repositorio remoto en la computadora local.
@@ -69,9 +73,9 @@ Para seguir este ejemplo, bifurque (_fork_) a su cuenta en GitHub el repositorio
 
 ```{bash eval = F}
 # 1. Especificación del nombre y de la dirección de correo del usuario.
-# Debe modificar los siguienes comandos con sus propios datos.
+# Debe modificar la dirección de correo y el nombre del usuario con sus propios datos.
 $ git config --global user.email "usuario@correo.com"
-$ git config --global user.name "Mi nombre de usuario"
+$ git config --global user.name "Nombre de usuario"
 
 # 2. Clonación del repositorio remoto a la estación de trabajo local.
 # Debe sustituir "usuario" por su nombre de usuario en GitHub.
@@ -80,19 +84,19 @@ $ git clone https://github.com/usuario/tutorial-git-repo-ejemplo.git
 # 3. Cambio al directorio del repositorio recién clonado.
 $ cd tutorial-git-repo-ejemplo
 
-# 4. Realice algunos cambios en el archivo README.md del repositorio recién clonado (ej. agregue una nueva línea).
+# 4. En este punto, realice algunas modificaciones en el archivo README.md del repositorio recién clonado (ej. agregue una nueva línea).
 
-# 5. Revisión de los archivos con cambios.
+# 5. Revisión de los archivos con modificaciones.
 $ git status
 
 # 6. Adición de los archivos modificados al "área de espera".
 # El punto (.) indica que se agregarán todos los archivos modificados.
 $ git add .
 
-# 7. Commit de los cambios
+# 7. Almacenamiento (commit) del conjunto de archivos modificados, junto con un mensaje explicativo.
 $ git commit -m "Agregar líneas".
 
-# 8. Push de los cambios.
+# 8. "Subida" (push) de las modificaciones al repositorio remoto.
 $ git push
 ```
 
