@@ -53,15 +53,19 @@ Desde el punto de vista de un usuario de Git (ej. un programador), Git se utiliz
 * **_push_**: para "subir" al repositorio remoto los cambios realizados en el repositorio local. Esta operación se realiza mediante el comando [git push](https://git-scm.com/docs/git-push). Es probable que el sistema remoto le solicite al usuario algún tipo de autenticación (ej. nombre de usuario y clave).
 * **_pull_**: para "bajar" al repositorio local los cambios realizados en el repositorio remoto. Esta operación se realiza mediante el comando [git pull](https://git-scm.com/docs/git-pull).
 
+Las operaciones _push_ y _pull_ se ilustran en la figura 1:
+
+![Figura 1: Operaciones _push_ y _pull_. Imagen de Melinda Higgins (https://www.coursera.org/learn/reproducible-templates-analysis/lecture/NGbQv/git-and-github-part-1)](img/push-pull.png)
+
 Antes de un _push_, el usuario debe seleccionar los archivos que desea subir mediante el comando [git add](https://git-scm.com/docs/git-add), el cual pasa los archivos a un "área de espera" (_staging area_). Luego debe usarse el comando [git commit](https://git-scm.com/docs/git-commit) para "guardar" los cambios en el área de espera.
 
-La relación entre estas operaciones de Git, se ilustra en la figura 1:
+La relación entre estas operaciones de Git, se ilustra en la figura 2:
 
-![Figura 1: Operaciones de Git. Imagen de Steven Klavins (https://medium.com/@stevenklavins94/version-control-part-4-c9387cf5b33e)](img/git-push-pull.png)
+![Figura 2: Operaciones de Git. Imagen de Steven Klavins (https://medium.com/@stevenklavins94/version-control-part-4-c9387cf5b33e)](img/git-push-pull.png)
 
-En la figura 2 se muestra la función de algunos de los comandos de Git mediante una comparación con el procesamiento de una compra en línea:
+En la figura 3 se muestra la función de algunos de los comandos de Git mediante una comparación con el procesamiento de una compra en línea:
 
-![Figura 2: Operaciones de Git y compras en línea. Imagen de Melinda Higgins (https://www.coursera.org/learn/reproducible-templates-analysis/lecture/NGbQv/git-and-github-part-2)](img/git-stage-commit-push.png)
+![Figura 3: Operaciones de Git y compras en línea. Imagen de Melinda Higgins (https://www.coursera.org/learn/reproducible-templates-analysis/lecture/NGbQv/git-and-github-part-2)](img/git-stage-commit-push.png)
 
 Otros comandos de Git de uso frecuente son:
 
