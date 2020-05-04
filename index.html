@@ -1576,7 +1576,7 @@ div.tocify {
 <li>Tutorial sobre comandos de Git (parte 1): <a href="https://kolosek.com/git-commands-tutorial-part1/">Git Commands Tutorial - Part 1</a>.</li>
 <li><p>Tutorial sobre comandos de Git (parte 2): <a href="https://kolosek.com/git-commands-tutorial-part2/">Git Commands Tutorial - Part 2</a>.</p></li>
 <li><p>Curso sobre investigación reproducible - Git y GitHub: <a href="https://www.coursera.org/learn/reproducible-templates-analysis/lecture/Cg6k7/git-and-github-part-1">Reproducible Templates for Analysis and Dissemination - Git and Github Part 1</a>.</p></li>
-<li><p>Ayuda para el uso de la línea de comandos: <a href="https://www.git-tower.com/blog/command-line-cheat-sheet/">Command Line Cheat Sheet</a>.</p></li>
+<li><p>Ayuda para el uso de la línea de comandos en sistemas Unix: <a href="https://www.git-tower.com/blog/command-line-cheat-sheet/">Command Line Cheat Sheet</a>.</p></li>
 </ul>
 </div>
 <div id="caracteristicas-generales-de-git" class="section level2">
@@ -1621,8 +1621,12 @@ div.tocify {
 <div id="clonacion-de-un-repositorio-remoto-y-push-de-los-cambios-efectuados-localmente" class="section level3">
 <h3>Clonación de un repositorio remoto y “push” de los cambios efectuados localmente</h3>
 <p>En este ejemplo de flujo de trabajo, se clonará un repositorio remoto en la computadora local, se realizarán cambios en uno de sus archivos y se “subirán” de vuelta al repositorio remoto mediante la operación <em>push</em> de Git.</p>
-<p>Para seguir este ejemplo, bifurque (<em>fork</em>) a su cuenta en GitHub el repositorio localizado en la dirección <a href="https://github.com/geoprocesamiento-2020i/tutorial-git-repo-ejemplo" class="uri">https://github.com/geoprocesamiento-2020i/tutorial-git-repo-ejemplo</a>. Luego, ejecute los siguiente comandos desde la terminal del sistema operativo o desde alguna herramienta que incorpore una interfaz para Git (ej. <a href="https://rstudio.com/">RStudio</a>).</p>
-<pre class="bash"><code># 1. Especificación del nombre y de la dirección de correo del usuario.
+<p>Para seguir este ejemplo, bifurque (<em>fork</em>) a su cuenta en GitHub el repositorio localizado en la dirección <a href="https://github.com/geoprocesamiento-2020i/tutorial-git-repo-ejemplo" class="uri">https://github.com/geoprocesamiento-2020i/tutorial-git-repo-ejemplo</a>. Luego, ejecute los siguiente comandos desde la terminal del sistema operativo o desde alguna herramienta que incorpore una interfaz para Git (ej. en la ventana <em>Terminal</em> de <a href="https://rstudio.com/">RStudio</a>).</p>
+<pre class="bash"><code># 0. Posicionamiento en el directorio en el que va a residir el repositorio clonado.
+# Por ejemplo, el comando &quot;cd&quot; (sin argumentos) se posiciona en el directorio del usuario.
+$ cd
+
+# 1. Especificación del nombre y de la dirección de correo del usuario.
 # Debe modificar la dirección de correo y el nombre del usuario con sus propios datos.
 $ git config --global user.email &quot;usuario@correo.com&quot;
 $ git config --global user.name &quot;Nombre de usuario&quot;

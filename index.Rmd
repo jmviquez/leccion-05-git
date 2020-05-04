@@ -26,7 +26,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * Curso sobre investigación reproducible - Git y GitHub: [Reproducible Templates for Analysis and Dissemination - Git and Github Part 1](https://www.coursera.org/learn/reproducible-templates-analysis/lecture/Cg6k7/git-and-github-part-1).
 
-* Ayuda para el uso de la línea de comandos: [Command Line Cheat Sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/).
+* Ayuda para el uso de la línea de comandos en sistemas Unix: [Command Line Cheat Sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/).
 
 ## Características generales de Git
 [Git](https://git-scm.com/) es un sistema de [control de versiones](https://en.wikipedia.org/wiki/Version_control) diseñado para rastrear cambios en el código fuente durante el proceso de desarrollo de software. Sin embargo, puede ser utilizado para llevar el control de los cambios en cualquier conjunto de archivos (ej. [documentación](https://guides.github.com/features/wikis/), [música](https://techcrunch.com/2013/10/09/splice-music/)). Un sistema de control de versiones proporciona, entre otras ventajas:
@@ -66,9 +66,13 @@ Otros comandos de Git de uso frecuente son:
 ### Clonación de un repositorio remoto y "push" de los cambios efectuados localmente
 En este ejemplo de flujo de trabajo, se clonará un repositorio remoto en la computadora local, se realizarán cambios en uno de sus archivos y se "subirán" de vuelta al repositorio remoto mediante la operación _push_ de Git.
 
-Para seguir este ejemplo, bifurque (_fork_) a su cuenta en GitHub el repositorio localizado en la dirección [https://github.com/geoprocesamiento-2020i/tutorial-git-repo-ejemplo](https://github.com/geoprocesamiento-2020i/tutorial-git-repo-ejemplo). Luego, ejecute los siguiente comandos desde la terminal del sistema operativo o desde alguna herramienta que incorpore una interfaz para Git (ej. [RStudio](https://rstudio.com/)).
+Para seguir este ejemplo, bifurque (_fork_) a su cuenta en GitHub el repositorio localizado en la dirección [https://github.com/geoprocesamiento-2020i/tutorial-git-repo-ejemplo](https://github.com/geoprocesamiento-2020i/tutorial-git-repo-ejemplo). Luego, ejecute los siguiente comandos desde la terminal del sistema operativo o desde alguna herramienta que incorpore una interfaz para Git (ej. en la ventana _Terminal_ de [RStudio](https://rstudio.com/)).
 
 ```{bash eval = F}
+# 0. Posicionamiento en el directorio en el que va a residir el repositorio clonado.
+# Por ejemplo, el comando "cd" (sin argumentos) se posiciona en el directorio del usuario.
+$ cd
+
 # 1. Especificación del nombre y de la dirección de correo del usuario.
 # Debe modificar la dirección de correo y el nombre del usuario con sus propios datos.
 $ git config --global user.email "usuario@correo.com"
